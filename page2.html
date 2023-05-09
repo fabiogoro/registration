@@ -10,26 +10,27 @@
 </head>
 <body>
     <div>
-        <label id="cityID">City:</label>
-        <input type="text" id="cityID">
+        <label for="cityID">City:</label>
+        <input text="text" id="cityID">
         <div class="child" id="requiredStar"></div>
         <br>
-        <label id="streetID">Street:</label>
-        <input type="text" id="streetID">
+        <label for="streetID">Street:</label>
+        <input text="text" id="streetID">
         <div class="child" id="requiredStar"></div>
         <br>
-        <label id="houseID">House Address Number:</label>
-        <input type="text" id="houseID">
+        <label for="houseID">House Address Number:</label>
+        <input text="text" id="houseID" oninput="validateHouseNumber()">
         <div class="child" id="requiredStar"></div>
     </div> 
     <div class="buttons">
-        <button id="next" onclick="function()">Next</button>
+        <button id="next" onclick="function()">Next</button> <!-- function() should include validationsPageTwo() -->
         <button id="previous" onclick="function()">Previous</button>
     </div>
  
 </body>
 
-<!-- <script src="group.js"></script> -->
+<script src="validationsPage2.js"></script>
+
 
 
 </html>
