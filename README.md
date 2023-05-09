@@ -1,2 +1,3 @@
-# registration
-# this is a note made by zoe in local at 0857cdt 
+# Registration wizard
+
+This project is a registration wizard with validations, localstorage and other controls. Created during Brightcode training.
