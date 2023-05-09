@@ -8,8 +8,11 @@
     
     <title>PhaseTwo</title>
 </head>
-<body>
+<body class="Address">
     <div>
+        <h1>Your Address</h1>
+    </div>
+    <div class = "form">
         <label for="cityID">City:</label>
         <input text="text" id="cityID"> 
         <div class="child" id="cityValidation"></div>
@@ -21,11 +24,15 @@
         <label for="houseID">House Address Number:</label>
         <input text="text" id="houseID" oninput="validateHouseNumber()">
         <div class="child" id="houseValidation"></div>
+        <br>
+        <br>
+        <div class="buttons">
+            <button id="previous" onclick="function()">Previous</button>
+            <button id="next" onclick="function()">Next</button> <!-- function() should include validationsPageTwo() -->
+            
+        </div>
     </div> 
-    <div class="buttons">
-        <button id="next" onclick="function()">Next</button> <!-- function() should include validationsPageTwo() -->
-        <button id="previous" onclick="function()">Previous</button>
-    </div>
+    
  
 </body>
 

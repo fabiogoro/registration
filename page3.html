@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="Information">
     <div>
-        <label for="imageID">Image:</label>
+        <h1>Your Image and Hobbies</h1>
+    </div>
+    <div class="form">
+        <label for="imageID">Image URL:</label>
         <input type="url" id="imageID">
         <div class="child" id="imageValidation"></div>
         <br>
+        <br>
         <div id="hobbiesID"> 
             <label">Hobbies:</label>
-            <br>
             <br>
             <input type="checkbox" id="Chess">Chess
             <br>
@@ -30,11 +33,8 @@
         <br>
         <div class="buttons">
             <button id="previous" onclick="function()">Previous</button>
-            <button id="submit" onclick="validationsPageThree()">Submit</button>  <!-- validationsPageThree() should be inside function() -->
-           
+            <button id="submit" onclick="function()">Submit</button>  <!-- validationsPageThree() should be inside function() -->
         </div>
-
-
     </div>
     <script src="validationsPage3.js"></script>
     
