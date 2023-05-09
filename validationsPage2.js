@@ -12,14 +12,15 @@ function validationsPageTwo(){
 function validCityAndStreet(){
     let city = document.querySelector('#cityID').value;
     let street = document.querySelector('#streetID').value;
+    let output = true;
     if (!city){
         document.querySelector('#cityValidation').textContent = star;
-        return false;
-    } else if (!street){
+        output = false;
+    }
+    if (!street){
         document.querySelector('#streetValidation').textContent = star;
-        return false;
-    } else {
-        return true;
+        output = false;
+    return output
     }
 }
 
