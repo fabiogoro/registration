@@ -1,6 +1,7 @@
 class LocalStorageManager{
   constructor(){
     this.user = new User()
+    this.savedPage = localStorage.getItem('savedPage')
     this.loadUser()
     this.startInputs()
     this.startCheckboxes()
@@ -39,6 +40,15 @@ class LocalStorageManager{
   save(){
     localStorage.setItem('user', JSON.stringify(this.user))
   }
+
+  set savedPage(location){
+    localStorage.setItem('savedPage')
+  }
+
+  clear(){
+    localStorage.removeItem('user')
+    localStorage.removeItem('savedPage')
+  }
 }
 
-new LocalStorageManager()
+const localStorageManager = new LocalStorageManager()
