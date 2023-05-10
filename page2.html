@@ -1,40 +1,41 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>PhaseTwo</title>
-</head>
-<body class="Address">
+
+    <title>Registration - Page 02</title>
+  </head>
+  <body class="Address">
     <div>
-        <h1>Your Address</h1>
+      <h1>Your Address</h1>
     </div>
     <div class = "form">
-        <label for="cityID">City:</label>
-        <input text="text" id="cityID"> 
-        <div class="child" id="cityValidation"></div>
-        <br>
-        <label for="streetID">Street:</label>
-        <input text="text" id="streetID">
-        <div class="child" id="streetValidation"></div>
-        <br>
-        <label for="houseID">House Address Number:</label>
-        <input text="text" id="houseID" oninput="validateHouseNumber()">
-        <div class="child" id="houseValidation"></div>
-        <br>
-        <br>
-        <div class="buttons">
-            <button id="previous" onclick="function()">Previous</button>
-            <button id="next" onclick="function()">Next</button> <!-- function() should include validationsPageTwo() -->
-            
-        </div>
-    </div> 
-</body>
+      <label for="city">City:</label>
+      <input class="input-storage" type="text" id="city">
+      <div class="child" id="cityValidation"></div>
+      <br>
+      <label for="street">Street:</label>
+      <input class="input-storage" type="text" id="street">
+      <div class="child" id="streetValidation"></div>
+      <br>
+      <label for="house">House Address Number:</label>
+      <input class="input-storage" type="number" min=0 id="house">
+      <div class="child" id="houseValidation"></div>
+      <br>
+      <br>
+      <div class="buttons">
+        <button id="previous" onclick="function()">Previous</button>
+        <button id="next" onclick="function(){}">Next</button> <!-- function() should include validationsPageTwo() -->
 
-<script src="validationsPage2.js"></script> 
+      </div>
+    </div> 
+  </body>
+
+  <script src="validationsPage2.js"></script> 
+  <script src="localstorage.js"></script>
 
 
 </html>

@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body class="Information">
+
+    <title>Registration - Page 03</title>
+  </head>
+  <body class="Information">
     <div>
-        <h1>Your Image and Hobbies</h1>
+      <h1>Your Image and Hobbies</h1>
     </div>
     <div class="form">
-        <label for="imageID">Image URL:</label>
-        <input type="url" id="imageID">
-        <div class="child" id="imageValidation"></div>
+      <label for="image">Image:</label>
+      <input class="input-storage" type="url" id="image">
+      <div class="child" id="imageValidation"></div>
+      <br>
+      <div id="hobbies"> 
+        <label>Hobbies:</label>
         <br>
+        <input class="checkbox-storage" id="chess" type="checkbox" value="Chess" name="hobbies"><label for="chess">Chess</label>
         <br>
-        <div id="hobbiesID"> 
-            <label">Hobbies:</label>
-            <br>
-            <input type="checkbox" id="Chess">Chess
-            <br>
-            <input type="checkbox" id="Chess">Movies
-            <br>
-            <input type="checkbox" id="Chess">Sports
-            <br>
-            <input type="checkbox" id="Chess">Cars
-            <br>
-            <input type="checkbox" id="Chess">Dolls
-        </div>
+        <input class="checkbox-storage" id="movies" type="checkbox" name="hobbies" value="Movies"><label for="movies">Movies</label>
         <br>
-        <div class="buttons">
-            <button id="previous" onclick="function()">Previous</button>
-            <button id="submit" onclick="function()">Submit</button>  <!-- validationsPageThree() should be inside function() -->
-        </div>
+        <input class="checkbox-storage" id="sports" type="checkbox" name="hobbies" value="Sports"><label for="sports">Sports</label>
+        <br>
+        <input class="checkbox-storage" id="cars" type="checkbox" name="hobbies" value="Cars"><label for="cars">Cars</label>
+        <br>
+        <input class="checkbox-storage" id="dolls" type="checkbox" name="hobbies" value="Dolls"><label for="dolls">Dolls</label>
+      </div>
+      <br>
+      <div class="buttons">
+        <button id="previous" onclick="function(){}">Previous</button>
+        <button id="submit" onclick="function(){}">Submit</button>  <!-- validationsPageThree() should be inside function() -->
+      </div>
     </div>
     <script src="validationsPage3.js"></script>
-    
-</body>
+
+  </body>
+  <script src="localstorage.js"></script>
 </html>

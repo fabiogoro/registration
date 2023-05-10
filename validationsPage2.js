@@ -2,44 +2,45 @@ let houseValid = true;
 let star = "*";
 
 function validationsPageTwo(){
-    if (!validCityAndStreet() || houseValid == false){
-        return false;
-    } else {
-        return true;
-    }
+  if (!validCityAndStreet() || houseValid == false){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function validCityAndStreet(){
-    let city = document.querySelector('#cityID').value;
-    let street = document.querySelector('#streetID').value;
-    let output = true;
-    if (!city){
-        document.querySelector('#cityValidation').textContent = star;
-        output = false;
-    }
-    if (!street){
-        document.querySelector('#streetValidation').textContent = star;
-        output = false;
+  let city = document.querySelector('#city').value;
+  let street = document.querySelector('#street').value;
+  let output = true;
+  if (!city){
+    document.querySelector('#cityValidation').textContent = star;
+    output = false;
+  }
+  else document.querySelector('#cityValidation').textContent = ''
+  if (!street){
+    document.querySelector('#streetValidation').textContent = star;
+    output = false;
     return output
-    }
+  }
+  else document.querySelector('#streetValidation').textContent = ''
+
+  let houseInput = document.querySelector('#house').value;
+  if(!houseInput){
+    houseValid = true;
+    document.querySelector('#houseValidation').textContent = "house address is optional";
+  } else if (houseInput <= 0){
+    houseValid = false;
+    document.querySelector('#houseValidation').textContent = "house address cannot be 0 or negative";
+  } else {
+    houseValid = true;
+    document.querySelector('#houseValidation').textContent = "";
+  }
 }
 
 
 
-function validateHouseNumber(){
-    let houseInput = document.querySelector('#houseID').value;
-    if(!houseInput){
-        houseValid = true;
-        document.querySelector('#houseValidation').textContent = "house address is optional";
-    } else if (houseInput <= 0){
-        houseValid = false;
-        document.querySelector('#houseValidation').textContent = "house address cannot be 0 or negative";
-    } else {
-        houseValid = true;
-        document.querySelector('#houseValidation').textContent = "";
-    }
-}
 
 
 
-    
+

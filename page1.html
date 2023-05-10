@@ -3,33 +3,37 @@
   <head>
     <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration - Page 01</title>
   </head>
   <body class="Information"> 
     <div>
-        <h1>Your Basic Information</h1>
+      <h1>Your Basic Information</h1>
     </div>
-      <div class = "form">
-        <label for="nameID">Name:</label>
-        <input type="name" id="nameID">
-        <div class="child" id="nameValidation"></div>
-        <br>
-        <label for="emailID">Email:</label>
-        <input type="email" id="emailID">
-        <div class="child" id="emailValidation"></div>
-        <br>
-        <label for="birthdayID">Birthday:</label>
-        <br>
-        <input type="date" id="birthdayID" oninput="updateIfBirthdayHasInput()">
-        <div class="child" id="birthdayValidation"></div>
-        <br>
-        <br>
-        <div class="buttons">
-          <button onclick="function()">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
-        </div>
+    <div class = "form">
+      <label for="name">Name:</label>
+      <input class="input-storage" type="text" id="name">
+      <div class="child" id="nameValidation"></div>
+      <br>
+      <label for="email">Email:</label>
+      <input class="input-storage" type="email" id="email">
+      <div class="child" id="emailValidation"></div>
+      <br>
+      <label for="birthday">Birthdate:</label>
+      <br>
+      <input class="input-storage" type="date" id="birthday">
+      <div class="child" id="birthdayValidation"></div>
+      <br>
+      <br>
+      <div class="buttons">
+        <button onclick="function(){}">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
+      </div>
     </div> 
-   
-    
+
+
   </body>
+  <script src="localstorage.js"></script>
   <script src="validationsPage1.js"></script>
 </html>
