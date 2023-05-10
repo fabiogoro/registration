@@ -1,0 +1,48 @@
+body.Information{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/telAvivBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+body.Address{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/israeliHouse.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.child{
+    display: inline-block;
+    color: red;
+}
+
+.form{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    border: 2px solid;
+    display: block;
+    background: rgba(0,0,0,0.5);
+    width: 5cm;
+    margin-right: auto;
+    margin-left: auto;
+    float: center;
+    padding: 1cm;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:beige;
+    float:center; 
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2cm;
+}
+

@@ -6,7 +6,7 @@ class LocalStorageManager{
   }
 
   startInputs(){
-    const inputs = document.querySelectorAll(".save-storage")
+    const inputs = document.querySelectorAll(".input-storage")
     inputs.forEach((i)=>new InputManager(i, this))
   }
 

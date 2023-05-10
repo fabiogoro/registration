@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Registration - Page 01</title>
   </head>
-  <body>
+  <body class="Information"> 
     <div>
+      <h1>Your Basic Information</h1>
+    </div>
+    <div class = "form">
       <label for="name">Name:</label>
-      <input class="save-storage" type="name" id="name">
-      <div class="child" id="requiredStar"></div>
+      <input class="input-storage" type="text" id="name">
+      <div class="child" id="nameValidation"></div>
       <br>
       <label for="email">Email:</label>
-      <input class="save-storage" type="email" id="email">
-      <div class="child" id="requiredStar"></div>
+      <input class="input-storage" type="email" id="email">
+      <div class="child" id="emailValidation"></div>
       <br>
       <label for="birthday">Birthdate:</label>
-      <input class="save-storage" type="date" id="birthday">
-      <div class="child" id="requiredStar"></div>
+      <br>
+      <input class="input-storage" type="date" id="birthday">
+      <div class="child" id="birthdayValidation"></div>
+      <br>
+      <br>
+      <div class="buttons">
+        <button onclick="function(){}">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
+      </div>
     </div> 
-    <div class="buttons">
-      <button onclick="function()">Next</button>
-    </div>
+
+
   </body>
   <script src="localstorage.js"></script>
+  <script src="validationsPage1.js"></script>
 </html>
