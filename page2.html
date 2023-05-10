@@ -1,35 +1,32 @@
+<!DOCTYPE html>
 <html>
-<html lang="en">
-<head>
-    <!-- <link href="groupstyle.css" rel="stylesheet"> -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>PhaseTwo</title>
-</head>
-<body>
-    <div>
-        <label id="cityID">City:</label>
-        <input type="text" id="cityID">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Registration - Page 02</title>
+    </head>
+    <body>
+      <div>
+        <label id="city">City:</label>
+        <input class="save-storage" type="text" id="city">
         <div class="child" id="requiredStar"></div>
         <br>
-        <label id="streetID">Street:</label>
-        <input type="text" id="streetID">
+        <label id="street">Street:</label>
+        <input class="save-storage" type="text" id="street">
         <div class="child" id="requiredStar"></div>
         <br>
-        <label id="houseID">House Address Number:</label>
-        <input type="text" id="houseID">
+        <label id="house">House Address Number:</label>
+        <input class="save-storage" type="text" id="house">
         <div class="child" id="requiredStar"></div>
-    </div> 
-    <div class="buttons">
+      </div> 
+      <div class="buttons">
         <button onclick="function()">Next</button>
         <button onclick="function()">Previous</button>
-    </div>
- 
-</body>
+      </div>
 
-<!-- <script src="group.js"></script> -->
-
-
-</html>
+    </body>
+    <script src="localstorage.js"></script>
+  </html>

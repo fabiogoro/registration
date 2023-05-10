@@ -2,24 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration - Page 01</title>
   </head>
   <body>
     <div>
-      <label for="nameID">Name:</label>
-      <input type="name" id="nameID">
+      <label for="name">Name:</label>
+      <input class="save-storage" type="name" id="name">
       <div class="child" id="requiredStar"></div>
       <br>
-      <label for="emailID">Email:</label>
-      <input type="email" id="emailID">
+      <label for="email">Email:</label>
+      <input class="save-storage" type="email" id="email">
       <div class="child" id="requiredStar"></div>
       <br>
-      <label for="birthdayID">:</label>
-      <input type="date" id="birthdayID">
+      <label for="birthday">Birthdate:</label>
+      <input class="save-storage" type="date" id="birthday">
       <div class="child" id="requiredStar"></div>
     </div> 
     <div class="buttons">
       <button onclick="function()">Next</button>
     </div>
   </body>
+  <script src="localstorage.js"></script>
 </html>

@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Registration - Page 03</title>
 </head>
 <body>
     <div>
-        <label id="imageID">Image:</label>
-        <input type="url" id="imageID">
+        <label for="image">Image:</label>
+        <input class="save-storage" type="url" id="image">
         <div class="child" id="requiredStar"></div>
         <br>
-        <div id="hobbiesID"> 
-            <label">Hobbies:</label>
+        <div id="hobbies"> 
+            <label>Hobbies:</label>
             <br>
             <br>
-            <input type="checkbox" id="Chess">Chess
+            <input class="checkbox-storage" id="chess" type="checkbox" value="Chess" name="hobbies"><label for="chess">Chess</label>
             <br>
-            <input type="checkbox" id="Chess">Movies
+            <input class="checkbox-storage" id="movies" type="checkbox" name="hobbies" value="Movies"><label for="movies">Movies</label>
             <br>
-            <input type="checkbox" id="Chess">Sports
+            <input class="checkbox-storage" id="sports" type="checkbox" name="hobbies" value="Sports"><label for="sports">Sports</label>
             <br>
-            <input type="checkbox" id="Chess">Cars
+            <input class="checkbox-storage" id="cars" type="checkbox" name="hobbies" value="Cars"><label for="cars">Cars</label>
             <br>
-            <input type="checkbox" id="Chess">Dolls
+            <input class="checkbox-storage" id="dolls" type="checkbox" name="hobbies" value="Dolls"><label for="dolls">Dolls</label>
         </div>
         <br>
         <div class="buttons">
@@ -36,4 +37,5 @@
     </div>
     
 </body>
+<script src="localstorage.js"></script>
 </html>
