@@ -21,21 +21,19 @@ function validCityAndStreet(){
   if (!street){
     document.querySelector('#streetValidation').textContent = star;
     output = false;
-    return output
   }
   else document.querySelector('#streetValidation').textContent = ''
 
   let houseInput = document.querySelector('#house').value;
   if(!houseInput){
-    houseValid = true;
     document.querySelector('#houseValidation').textContent = "house address is optional";
   } else if (houseInput <= 0){
-    houseValid = false;
+    output = false;
     document.querySelector('#houseValidation').textContent = "house address cannot be 0 or negative";
   } else {
-    houseValid = true;
     document.querySelector('#houseValidation').textContent = "";
   }
+  return output
 }
 
 

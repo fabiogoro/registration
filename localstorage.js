@@ -1,7 +1,7 @@
 class LocalStorageManager{
   constructor(){
     this.user = new User()
-    this.savedPage = localStorage.getItem('savedPage')
+    this._savedPage = localStorage.getItem('savedPage')
     this.loadUser()
     this.startInputs()
     this.startCheckboxes()
@@ -37,12 +37,21 @@ class LocalStorageManager{
     addresses.forEach((i)=>new DisplayAddressManager(i, this))
   }
 
+  newRegistration(){
+    this.clear()
+    pageManager.redirect('page1.html')
+  }
+
   save(){
     localStorage.setItem('user', JSON.stringify(this.user))
   }
 
   set savedPage(location){
-    localStorage.setItem('savedPage')
+    localStorage.setItem('savedPage', location)
+  }
+
+  get savedPage(){
+    return this._savedPage
   }
 
   clear(){

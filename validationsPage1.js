@@ -31,7 +31,6 @@ function validateEmail(){
     return false;
   } else {
     document.querySelector('#emailValidation').textContent = '';
-    return false;
     return true;
   }
 }
