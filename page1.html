@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title></title>
   </head>
-  <body>
+  <body class="Information"> 
     <div>
-      <label for="nameID">Name:</label>
-      <input type="name" id="nameID">
-      <div class="child" id="requiredStar"></div>
-      <br>
-      <label for="emailID">Email:</label>
-      <input type="email" id="emailID">
-      <div class="child" id="requiredStar"></div>
-      <br>
-      <label for="birthdayID">:</label>
-      <input type="date" id="birthdayID">
-      <div class="child" id="requiredStar"></div>
-    </div> 
-    <div class="buttons">
-      <button onclick="function()">Next</button>
+        <h1>Your Basic Information</h1>
     </div>
+      <div class = "form">
+        <label for="nameID">Name:</label>
+        <input type="name" id="nameID">
+        <div class="child" id="nameValidation"></div>
+        <br>
+        <label for="emailID">Email:</label>
+        <input type="email" id="emailID">
+        <div class="child" id="emailValidation"></div>
+        <br>
+        <label for="birthdayID">Birthday:</label>
+        <br>
+        <input type="date" id="birthdayID" oninput="updateIfBirthdayHasInput()">
+        <div class="child" id="birthdayValidation"></div>
+        <br>
+        <br>
+        <div class="buttons">
+          <button onclick="function()">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
+        </div>
+    </div> 
+   
+    
   </body>
+  <script src="validationsPage1.js"></script>
 </html>
