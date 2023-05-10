@@ -28,7 +28,8 @@
       <br>
       <br>
       <div class="buttons">
-        <button onclick="if(validationsPageOne()) pageManager.redirect('page2.html')">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
+        <button id="nextbutton" step="1" onclick="nextButtons()">Next</button>
+        <!-- function() should include validationsPageOne() to check that all fields are good to go -->
       </div>
     </div> 
 
@@ -39,4 +40,5 @@
   <script src="localstorage.js"></script>
   <script src="pageredirection.js"></script>
   <script src="validationsPage1.js"></script>
+  <script src="buttons.js"></script>
 </html>
