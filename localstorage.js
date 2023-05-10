@@ -1,8 +1,20 @@
 class LocalStorageManager{
   constructor(){
     this.user = new User()
+    this.loadUser()
     this.startInputs()
     this.startCheckboxes()
+    this.startSummary()
+  }
+
+  loadUser(){
+    let user = localStorage.getItem('user')
+    if(user){
+      user = JSON.parse(user)
+      for(const i in user){
+        this.user[i] = user[i]
+      }
+    }
   }
 
   startInputs(){
@@ -14,63 +26,18 @@ class LocalStorageManager{
     const checkboxes = document.querySelectorAll(".checkbox-storage")
     checkboxes.forEach((i)=>new CheckboxManager(i, this))
   }
-}
 
-class InputManager{
-  constructor(input, storage){
-    this.input = input
-    this.storage = storage
-    this.input.onblur = this.onblur.bind(this)
-    this.readLocalStorage()
+  startSummary(){
+    const containers = document.querySelectorAll(".summary")
+    containers.forEach((i)=>new DisplayManager(i, this))
+    const images = document.querySelectorAll(".summary-img")
+    images.forEach((i)=>new DisplayImageManager(i, this))
+    const addresses = document.querySelectorAll(".summary-address")
+    addresses.forEach((i)=>new DisplayAddressManager(i, this))
   }
 
-  readLocalStorage(){
-    if(this.storage.user[this.input.id]) 
-      this.input.value = this.storage.user[this.input.id]
-  }
-
-  onblur(){
-    this.storage.user[this.input.id] = this.input.value
-    localStorage.setItem('user', JSON.stringify(this.storage.user))
-  }
-}
-
-class CheckboxManager extends InputManager{
-  constructor(input, storage){
-    super(input, storage)
-    this.input.onchange = this.onchange.bind(this)
-  }
-
-  readLocalStorage(){
-    this.name = this.input.getAttribute('name')
-    if(!this.storage.user[this.name]) {
-      this.storage.user[this.name] = []
-    } else 
-      this.input.checked = this.storage.user[this.name].includes(this.input.value)
-  }
-
-  onchange(){
-    if(this.storage.user[this.name].includes(this.input.value))
-      this.storage.user[this.name] = this.storage.user[this.name].filter(item => item !== this.input.value)
-    else
-      this.storage.user[this.name].push(this.input.value)
-    console.log(JSON.stringify(this.storage.user))
-    localStorage.setItem('user', JSON.stringify(this.storage.user))
-  }
-
-  onblur(){
-  }
-}
-
-class User{
-  constructor(){
-    let user = localStorage.getItem('user')
-    if(user){
-      user = JSON.parse(user)
-      for(const i in user){
-        this[i] = user[i]
-      }
-    }
+  save(){
+    localStorage.setItem('user', JSON.stringify(this.user))
   }
 }
 
