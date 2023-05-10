@@ -27,8 +27,8 @@
       <br>
       <br>
       <div class="buttons">
-        <button id="previous" onclick="function()">Previous</button>
-        <button id="next" onclick="function(){}">Next</button> <!-- function() should include validationsPageTwo() -->
+        <button id="previous" onclick="pageManager.redirect('page1.html')">Previous</button>
+        <button onclick="if(validationsPageTwo()) pageManager.redirect('page3.html')">Next</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
 
       </div>
     </div> 

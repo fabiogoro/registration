@@ -32,8 +32,8 @@
       </div>
       <br>
       <div class="buttons">
-        <button id="previous" onclick="function(){}">Previous</button>
-        <button id="submit" onclick="function(){}">Submit</button>  <!-- validationsPageThree() should be inside function() -->
+        <button id="previous" onclick="pageManager.redirect('page2.html')">Previous</button>
+        <button onclick="if(validationsPageThree()) pageManager.redirect('page4.html')">submit</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
       </div>
     </div>
     <script src="validationsPage3.js"></script>

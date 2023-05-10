@@ -71,5 +71,7 @@ class DisplayAddressManager extends DisplayManager{
     const house = this.storage.user['house']
     if(city && street && house)
       this.container.innerText += ` ${house}, ${street}, ${city}`
+    else if(city && street)
+      this.container.innerText += ` ${street}, ${city}`
   }
 }
