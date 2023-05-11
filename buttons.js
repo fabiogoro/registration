@@ -21,7 +21,15 @@ function backButton() {
 
 function nextButtonNavigate(stepNumber) {
     let neededPageNumber = stepNumber + 1;
-    pageManager.redirect(`page${neededPageNumber}.html`)
+    if (stepNumber === 1 && validationsPageOne() == true)  {
+        pageManager.redirect(`page${neededPageNumber}.html`)
+    }  
+    if (stepNumber === 2 && validationsPageTwo() == true)  {
+        pageManager.redirect(`page${neededPageNumber}.html`)
+    } 
+    if (stepNumber === 3 && validationsPageThree() == true)  {
+        pageManager.redirect(`page${neededPageNumber}.html`)
+    }     
 }
 
 function nextButtons() {
