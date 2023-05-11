@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="styles.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registration - Page 02</title>
-  </head>
-  <body class="Address">
-    <div>
-      <h1>Your Address</h1>
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registration - Page 02</title>
+</head>
+
+<body class="Address">
+  <div>
+    <h1>Your Address</h1>
+  </div>
+  <div class="form">
+    <label for="city">City:</label>
+    <input class="input-storage" type="text" id="city">
+    <div class="child" id="cityValidation"></div>
+    <br>
+    <label for="street">Street:</label>
+    <input class="input-storage" type="text" id="street">
+    <div class="child" id="streetValidation"></div>
+    <br>
+    <label for="house">House Address Number:</label>
+    <input class="input-storage" type="number" min=0 id="house">
+    <div class="child" id="houseValidation"></div>
+    <br>
+    <br>
+    <div class="buttons">
+      <button id="previousbutton" step="2" onclick=" backButton()">Previous</button>
+      <button id="nextbutton" step="2" onclick="nextButtons()">Next</button>
     </div>
-    <div class = "form">
-      <label for="city">City:</label>
-      <input class="input-storage" type="text" id="city">
-      <div class="child" id="cityValidation"></div>
-      <br>
-      <label for="street">Street:</label>
-      <input class="input-storage" type="text" id="street">
-      <div class="child" id="streetValidation"></div>
-      <br>
-      <label for="house">House Address Number:</label>
-      <input class="input-storage" type="number" min=0 id="house">
-      <div class="child" id="houseValidation"></div>
-      <br>
-      <br>
-      <div class="buttons">
-        <button id="previousbutton" step="2" onclick=" backButton()">Previous</button>
-        <button id="nextbutton" step="2" onclick="nextButtons()">Next</button>
-      </div>
-    </div> 
-  </body>
+  </div>
+</body>
 
-  <script src="validationsPage2.js"></script> 
-  <script src="classes.js"></script>
-  <script src="inputmanager.js"></script>
-  <script src="localstorage.js"></script>
-  <script src="pageredirection.js"></script>
-  <script src="buttons.js"></script>
+<script src="validationsPage2.js"></script>
+<script src="classes.js"></script>
+<script src="inputmanager.js"></script>
+<script src="localstorage.js"></script>
+<script src="pageredirection.js"></script>
+<script src="buttons.js"></script>
 
 
 </html>
