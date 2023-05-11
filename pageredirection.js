@@ -5,7 +5,7 @@ class PageManager{
   }
 
   checkCorrectPage(){
-    if(!localStorageManager.savedPage && this.currentLocation != 'page1.html') this.redirect('page1.html')
+    if(!localStorageManager.savedPage && this.currentLocation != 'splash.html') this.redirect('splash.html')
     else if(localStorageManager.savedPage && this.currentLocation != localStorageManager.savedPage) this.redirect(localStorageManager.savedPage)
   }
 
