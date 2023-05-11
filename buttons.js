@@ -23,13 +23,13 @@ function nextButtonNavigate(stepNumber) {
     let neededPageNumber = stepNumber + 1;
     if (stepNumber === 1 && validationsPageOne() == true)  {
         pageManager.redirect(`page${neededPageNumber}.html`)
-    }  
-    if (stepNumber === 2 && validationsPageTwo() == true)  {
+    }  else if (stepNumber === 2 && validationsPageTwo() == true)  {
         pageManager.redirect(`page${neededPageNumber}.html`)
-    } 
-    if (stepNumber === 3 && validationsPageThree() == true)  {
+    } else if (stepNumber === 3 && validationsPageThree() == true)  {
         pageManager.redirect(`page${neededPageNumber}.html`)
-    }     
+    } else {
+        alert("Please fill in all required field")
+    }    
 }
 
 function nextButtons() {
