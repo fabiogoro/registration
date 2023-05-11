@@ -71,5 +71,28 @@ class CheckboxManager extends InputManager{
   }
 }
 
+class RadioManager extends InputManager{
+  static selector = ".radio-storage"
+  
+  constructor(input){
+    super(input)
+    this.input.onchange = this.onchange.bind(this)
+  }
+
+  updateValue(){
+    this.name = this.input.getAttribute('name')
+    this.input.checked = localStorageManager.user[this.name] ==this.input.value 
+  }
+
+  onchange(){
+    localStorageManager.user[this.name] = this.input.value
+    localStorageManager.save()
+  }
+
+  onblur(){
+  }
+}
+
 InputManager.createInstances()
 CheckboxManager.createInstances()
+RadioManager.createInstances()

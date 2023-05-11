@@ -7,7 +7,6 @@
 class PageManager{
   constructor(){
     this.currentLocation = window.location.pathname.split('/').pop()
-    this.checkCorrectPage()
   }
 
   checkCorrectPage(){
@@ -22,3 +21,4 @@ class PageManager{
 }
 
 const pageManager = new PageManager()
+pageManager.checkCorrectPage()
