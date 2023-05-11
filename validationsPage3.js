@@ -1,15 +1,13 @@
 let star = "*";
 
-function validationsPageThree(){
-  let image = document.querySelector('#image').value;
+function validationsPageThree() {
+  let image = document.querySelector("#image").value;
   try {
     new URL(image);
-    document.querySelector('#imageValidation').textContent = '';
+    document.querySelector("#imageValidation").textContent = "";
     return true;
   } catch (err) {
-    document.querySelector('#imageValidation').textContent = star;
+    document.querySelector("#imageValidation").textContent = star;
     return false;
   }
 }
-
-
