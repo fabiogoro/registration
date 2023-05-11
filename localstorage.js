@@ -1,11 +1,14 @@
+/**
+ * This is the localstorage manager for this application. 
+ * It will create the user and savedPage storage for this page.
+ * It publishes functions to save and clear values.
+ * It also has the user structure for updating the cached user
+ *
+ */
 class LocalStorageManager{
   constructor(){
     this.user = new User()
     this._savedPage = localStorage.getItem('savedPage')
-    this.loadUser()
-    this.startInputs()
-    this.startCheckboxes()
-    this.startSummary()
   }
 
   loadUser(){
@@ -16,25 +19,6 @@ class LocalStorageManager{
         this.user[i] = user[i]
       }
     }
-  }
-
-  startInputs(){
-    const inputs = document.querySelectorAll(".input-storage")
-    inputs.forEach((i)=>new InputManager(i, this))
-  }
-
-  startCheckboxes(){
-    const checkboxes = document.querySelectorAll(".checkbox-storage")
-    checkboxes.forEach((i)=>new CheckboxManager(i, this))
-  }
-
-  startSummary(){
-    const containers = document.querySelectorAll(".summary")
-    containers.forEach((i)=>new DisplayManager(i, this))
-    const images = document.querySelectorAll(".summary-img")
-    images.forEach((i)=>new DisplayImageManager(i, this))
-    const addresses = document.querySelectorAll(".summary-address")
-    addresses.forEach((i)=>new DisplayAddressManager(i, this))
   }
 
   newRegistration(){
@@ -61,3 +45,4 @@ class LocalStorageManager{
 }
 
 const localStorageManager = new LocalStorageManager()
+localStorageManager.loadUser()
