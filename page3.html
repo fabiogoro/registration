@@ -32,8 +32,8 @@
       </div>
       <br>
       <div class="buttons">
-        <button id="previous" onclick="pageManager.redirect('page2.html')">Previous</button>
-        <button onclick="if(validationsPageThree()) pageManager.redirect('page4.html')">submit</button> <!-- function() should include validationsPageOne() to check that all fields are good to go -->
+        <button id="previousbutton" step="3" onclick=" backButton()">Previous</button>
+        <button id="nextbutton" step="3" onclick="nextButtons()">submit</button> 
       </div>
     </div>
     <script src="validationsPage3.js"></script>
@@ -43,4 +43,5 @@
   <script src="inputmanager.js"></script>
   <script src="localstorage.js"></script>
   <script src="pageredirection.js"></script>
+  <script src="buttons.js"></script>
 </html>
