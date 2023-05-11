@@ -14,32 +14,29 @@
   <div>
     <h1>Your Address</h1>
   </div>
-  <div class="form">
+  <form id="form" class="form">
     <label for="city">City:</label>
-    <input class="input-storage" type="text" id="city">
-    <div class="child" id="cityValidation"></div>
+    <input class="input-storage" type="text" id="city" required>
+    <br>
     <br>
     <label for="street">Street:</label>
-    <input class="input-storage" type="text" id="street">
-    <div class="child" id="streetValidation"></div>
+    <input class="input-storage" type="text" id="street" required>
+    <br>
     <br>
     <label for="house">House Address Number:</label>
-    <input class="input-storage" type="number" min=0 id="house">
-    <div class="child" id="houseValidation"></div>
+    <input class="input-storage" type="number" min=1 id="house">
     <br>
     <br>
     <div class="buttons">
-      <button id="previousbutton" step="2" onclick=" backButton()">Previous</button>
-      <button id="nextbutton" step="2" onclick="nextButtons()">Next</button>
+      <button id="previousbutton" step="2">Previous</button>
+      <button id="nextbutton" step="2">Next</button>
     </div>
   </div>
 </body>
 
-  <script src="validationsPage2.js"></script> 
   <script src="classes.js"></script>
   <script src="localstorage.js"></script>
   <script src="inputmanager.js"></script>
-  <script src="displaymanager.js"></script>
-  <script src="pageredirection.js"></script>
+  <script src="pagemanager.js"></script>
   <script src="buttons.js"></script>
 </html>

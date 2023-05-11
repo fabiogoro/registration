@@ -1,38 +1,18 @@
-let previousButton = document.querySelectorAll("#previousbutton");
-let nextButton = document.querySelectorAll("#nextbutton");
+let previousButton = document.querySelector("#previousbutton");
+let nextButton = document.querySelector("#nextbutton");
+let form = document.querySelector("#form");
 
-// make previous button move to the previous page
-function backButtonNavigate(stepNumber) {
-    let neededPageNumber = stepNumber - 1;
-    pageManager.redirect(`page${neededPageNumber}.html`)
+nextButton.onclick = function (e) {
+  e.preventDefault()
+  if(!form.checkValidity()) form.reportValidity()
+  else {
+    const stepNumber = parseInt(this.getAttribute("step"))
+    pageManager.redirect(`page${stepNumber+1}.html`)
+  }
 }
 
-// find the number of the page where button is located 
-function backButton() {
-    previousButton.forEach((button) => {      
-            const stepNumber = parseInt(button.getAttribute("step"))
-            backButtonNavigate(stepNumber);
-        })    
-}
-
-// validating fields, raise alert and move to the next page upon next button click
-function nextButtonNavigate(stepNumber) {
-    let neededPageNumber = stepNumber + 1;
-    if (stepNumber === 1 && validationsPageOne() == true)  {
-        pageManager.redirect(`page${neededPageNumber}.html`)
-    }  else if (stepNumber === 2 && validationsPageTwo() == true)  {
-        pageManager.redirect(`page${neededPageNumber}.html`)
-    } else if (stepNumber === 3 && validationsPageThree() == true)  {
-        pageManager.redirect(`page${neededPageNumber}.html`)
-    } else {
-        alert("Please fill in all required field")
-    }    
-}
-
-// find the number of the page where button is located 
-function nextButtons() {
-    nextButton.forEach((button) => {
-            const stepNumber = parseInt(button.getAttribute("step"))
-            nextButtonNavigate(stepNumber);
-        })
+previousButton.onclick = function (e) {
+  e.preventDefault()
+  const stepNumber = parseInt(this.getAttribute("step"))
+  pageManager.redirect(`page${stepNumber-1}.html`)
 }

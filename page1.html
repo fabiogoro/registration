@@ -12,33 +12,30 @@
     <div>
       <h1>Your Basic Information</h1>
     </div>
-    <div class = "form">
+    <form id="form" class = "form">
       <label for="name">Name:</label>
-      <input class="input-storage" type="text" id="name">
-      <div class="child" id="nameValidation"></div>
+      <input title="Must have first and last name, and both must have at least 2 characters" pattern="(.){2,} (.){2,}" class="input-storage" type="text" id="name" required>
+      <br>
       <br>
       <label for="email">Email:</label>
-      <input class="input-storage" type="email" id="email">
-      <div class="child" id="emailValidation"></div>
+      <input class="input-storage" type="email" id="email" required>
+      <br>
       <br>
       <label for="birthday">Birthdate:</label>
       <br>
-      <input class="input-storage" type="date" id="birthday">
-      <div class="child" id="birthdayValidation"></div>
+      <input class="input-storage" type="date" id="birthday" required>
       <br>
       <br>
       <div class="buttons">
-        <button id="nextbutton" step="1" onclick="nextButtons()">Next</button>
+        <button id="nextbutton" step="1">Next</button>
       </div>
-    </div> 
+    </form> 
 
 
   </body>
   <script src="classes.js"></script>
   <script src="localstorage.js"></script>
   <script src="inputmanager.js"></script>
-  <script src="displaymanager.js"></script>
-  <script src="pageredirection.js"></script>
-  <script src="validationsPage1.js"></script>
+  <script src="pagemanager.js"></script>
   <script src="buttons.js"></script>
 </html>

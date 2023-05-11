@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration - Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <h1>Registration Summary</h1>
+  </head>
+  <body class="Information">
+    <div class = "form-summary">
+
+      <div class="summary" id="name">Name: </div>
+      <br>
+      <div class="summary" id="email">Email: </div>
+      <br>
+      <div class="summary" id="birthday">Birthdate: </div>
+      <br>
+      <div class="summary-address" id="address">Address: </div>
+      <div class="summary-img" id="image"><img src="" alt=""></div>
+      <div class="summary" id="hobbies">Hobbies: </div>
+      <br>
+      <div class="summary" id="happy">Is a happy person: </div>
+      <br>
+      <div class="summary" id="skydive">Would do skydive: </div>
+      <br>
+      <div class="summary" id="onedollar">Has $1 in the pocket: </div>
+      <br>
+      <div class="summary-button">
+        <button onclick="localStorageManager.newRegistration()">Reset</button>
+      </div>
+
+    </div>
+  </body>
+  <script src="classes.js"></script>
+  <script src="localstorage.js"></script>
+  <script src="displaymanager.js"></script>
+  <script src="pagemanager.js"></script>
+</html>

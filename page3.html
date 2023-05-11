@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+html lang="en">
   <head>
     <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -12,10 +12,10 @@
     <div>
       <h1>Your Image and Hobbies</h1>
     </div>
-    <div class="form">
+    <form id="form" class="form">
       <label for="image">Image:</label>
-      <input class="input-storage" type="url" id="image">
-      <div class="child" id="imageValidation"></div>
+      <input class="input-storage" type="url" id="image" required>
+      <br>
       <br>
       <div id="hobbies"> 
         <label>Hobbies:</label>
@@ -32,17 +32,14 @@
       </div>
       <br>
       <div class="buttons">
-        <button id="previousbutton" step="3" onclick=" backButton()">Previous</button>
-        <button id="nextbutton" step="3" onclick="nextButtons()">submit</button> 
+        <button id="previousbutton" step="3">Previous</button>
+        <button id="nextbutton" step="3">Next</button> 
       </div>
     </div>
-    <script src="validationsPage3.js"></script>
-
   </body>
   <script src="classes.js"></script>
   <script src="localstorage.js"></script>
   <script src="inputmanager.js"></script>
-  <script src="displaymanager.js"></script>
-  <script src="pageredirection.js"></script>
+  <script src="pagemanager.js"></script>
   <script src="buttons.js"></script>
 </html>

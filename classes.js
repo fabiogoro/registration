@@ -1,12 +1,15 @@
 class User{
-  constructor(name='', email='', birthdate='', city='', street='', house='', image='', hobbies=[]){
+  constructor(name='', email='', birthday='', city='', street='', house='', image='', hobbies=[], happy='Yes', skydive='Yes', onedollar='Yes'){
     this.name=name
     this.email=email
-    this.birthdate=birthdate
+    this.birthday=birthday
     this.city=city
     this.street=street
     this.house=house
     this.image=image
     this.hobbies=hobbies
+    this.happy=happy
+    this.skydive=skydive
+    this.onedollar=onedollar
   }
 }

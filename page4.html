@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="styles.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
-    <title>Registration - Summary</title>
-    <link rel="stylesheet" href="styles.css">
-    <h1>Registration Summary</h1>
+    <title>Registration - Page 04</title>
   </head>
   <body class="Information">
-    <div class = "form-summary">
-      
-      <div class="summary" id="name">Name: </div>
-      <br>
-      <div class="summary" id="email">Email: </div>
-      <br>
-      <div class="summary" id="birthday">Birthdate: </div>
-      <br>
-      <div class="summary-address" id="address">Address: </div>
-      <div class="summary-img" id="image"><img src="" alt=""></div>
-      <div class="summary" id="hobbies">Hobbies: </div>
-      <br>
-      <div class="summary-button">
-        <button onclick="localStorageManager.newRegistration()">Reset</button>
+    <div>
+      <h1>Health Information</h1>
+    </div>
+    <form id="form" class="form">
+      <div id="happy"> 
+        <label>Are you a happy person?</label>
+        <br>
+        <input class="radio-storage" id="yes1" type="radio" value="Yes" name="happy"><label for="yes1">Yes</label>
+        <br>
+        <input class="radio-storage" id="no1" type="radio" name="happy" value="No"><label for="no1">No</label>
+        <br>
       </div>
-      
+      <div id="skydive"> 
+        <br>
+        <label>Will you do skydiving?</label>
+        <br>
+        <input class="radio-storage" id="yes2" type="radio" value="Yes" name="skydive"><label for="yes2">Yes</label>
+        <br>
+        <input class="radio-storage" id="maybe2" type="radio" value="Maybe" name="skydive"><label for="maybe2">Maybe</label>
+        <br>
+        <input class="radio-storage" id="no2" type="radio" name="skydive" value="No"><label for="no2">No</label>
+        <br>
+      </div>
+      <div id="onedollar"> 
+        <br>
+        <label>Do you have $1 in you pocket now?</label>
+        <br>
+        <input class="radio-storage" id="yes3" type="radio" value="Yes" name="onedollar"><label for="yes3">Yes</label>
+        <br>
+        <input class="radio-storage" id="no3" type="radio" name="onedollar" value="No"><label for="no3">No</label>
+        <br>
+        <br>
+      </div>
+      <div class="buttons">
+        <button id="previousbutton" step="4">Previous</button>
+        <button id="nextbutton" step="4">submit</button> 
+      </div>
     </div>
   </body>
   <script src="classes.js"></script>
   <script src="localstorage.js"></script>
   <script src="inputmanager.js"></script>
-  <script src="displaymanager.js"></script>
-  <script src="pageredirection.js"></script>
+  <script src="pagemanager.js"></script>
+  <script src="buttons.js"></script>
 </html>
