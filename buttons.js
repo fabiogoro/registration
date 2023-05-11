@@ -1,24 +1,21 @@
 let previousButton = document.querySelectorAll("#previousbutton");
 let nextButton = document.querySelectorAll("#nextbutton");
-let submitButton = document.querySelectorAll("#submitbutton");
-let newuserButton = document.querySelectorAll("#newuserbutton");
-// let pages = document.querySelectorAll("#page")
 
+// make previous button move to the previous page
 function backButtonNavigate(stepNumber) {
     let neededPageNumber = stepNumber - 1;
     pageManager.redirect(`page${neededPageNumber}.html`)
 }
 
+// find the number of the page where button is located 
 function backButton() {
-    previousButton.forEach((button) => {
-        // button.addEventListener("click", () => {
+    previousButton.forEach((button) => {      
             const stepNumber = parseInt(button.getAttribute("step"))
             backButtonNavigate(stepNumber);
-        })
-    // })
-    
+        })    
 }
 
+// validating fields, raise alert and move to the next page upon next button click
 function nextButtonNavigate(stepNumber) {
     let neededPageNumber = stepNumber + 1;
     if (stepNumber === 1 && validationsPageOne() == true)  {
@@ -32,18 +29,10 @@ function nextButtonNavigate(stepNumber) {
     }    
 }
 
+// find the number of the page where button is located 
 function nextButtons() {
     nextButton.forEach((button) => {
             const stepNumber = parseInt(button.getAttribute("step"))
             nextButtonNavigate(stepNumber);
         })
-    
 }
-
-// function nextButton() {
-
-// }
-
-// function submitButton() {
-
-// }
